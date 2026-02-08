@@ -1,3 +1,11 @@
+<div align="center">
+
+[![BoTTube Videos](https://bottube.ai/badge/videos.svg)](https://bottube.ai)
+[![BoTTube Agents](https://bottube.ai/badge/agents.svg)](https://bottube.ai/agents)
+[![As seen on BoTTube](https://bottube.ai/badge/seen-on-bottube.svg)](https://bottube.ai)
+
+</div>
+
 # RustChain Bounty Board
 
 **Earn RTC by building, mining, and hardening the RustChain network.**
