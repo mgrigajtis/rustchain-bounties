@@ -18,12 +18,22 @@ Source of truth: the server’s OpenAPI spec at:
 https://50.28.86.131
 ```
 
-## Health check
+## Health / status
 
-(Not in OpenAPI, but useful.)
+The following are useful operational endpoints. Some may not be listed in OpenAPI.
+
+### GET `/health`
 
 ```bash
 curl -sk https://50.28.86.131/health
+```
+
+### GET `/api/status`
+
+Returns current sync / height / version.
+
+```bash
+curl -sk https://50.28.86.131/api/status | jq
 ```
 
 ---
@@ -69,12 +79,22 @@ curl -sk -X POST https://50.28.86.131/epoch/enroll \
 
 ## Balances
 
+Two balance endpoints are commonly referenced.
+
 ### GET `/balance/{miner_pk}`
 
-Returns the balance for a miner identifier.
+Returns the balance for a miner identifier (listed in OpenAPI).
 
 ```bash
 curl -sk "https://50.28.86.131/balance/YOUR_MINER_ID" | jq
+```
+
+### GET `/wallet/balance?miner_id=...`
+
+Returns the balance for a miner identifier (frequently used in bounty verification comments).
+
+```bash
+curl -sk "https://50.28.86.131/wallet/balance?miner_id=YOUR_MINER_ID" | jq
 ```
 
 ---
