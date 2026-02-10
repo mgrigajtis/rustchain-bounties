@@ -141,6 +141,10 @@ Any real (non-VM) hardware can mine. Vintage hardware gets bonuses:
 - Submit a PR referencing the issue number
 - Maintainer reviews and pays out in RTC
 
+See also:
+- `docs/CONTRIBUTING.md`
+- `docs/api-reference.md`
+
 ## Links
 
 - **RustChain**: [rustchain.org](https://rustchain.org) - Website & Block Explorer
