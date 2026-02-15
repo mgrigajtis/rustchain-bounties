@@ -72,6 +72,39 @@ DEFAULT_TARGETS = [
         "require_proof_link": True,
         "name": "X + BoTTube Social",
     },
+    {
+        "owner": "Scottcjn",
+        "repo": "rustchain-bounties",
+        "issue": 157,
+        "min_account_age_days": 30,
+        "required_stars": ["beacon-skill"],
+        "require_wallet": True,
+        "require_bottube_username": False,
+        "require_proof_link": True,
+        "name": "Beacon Star + Share",
+    },
+    {
+        "owner": "Scottcjn",
+        "repo": "rustchain-bounties",
+        "issue": 158,
+        "min_account_age_days": 30,
+        "required_stars": [],
+        "require_wallet": True,
+        "require_bottube_username": False,
+        "require_proof_link": True,
+        "name": "Beacon Integration",
+    },
+    {
+        "owner": "Scottcjn",
+        "repo": "bottube",
+        "issue": 122,
+        "min_account_age_days": 30,
+        "required_stars": ["bottube"],
+        "require_wallet": True,
+        "require_bottube_username": False,
+        "require_proof_link": True,
+        "name": "BoTTube Star + Share Why",
+    },
 ]
 
 MARKER_START = "<!-- auto-triage-report:start -->"
@@ -132,29 +165,70 @@ def _extract_wallet(body: str) -> Optional[str]:
     # Strip minimal markdown that commonly wraps labels like **RTC Wallet:**,
     # without corrupting valid underscores in wallet names (e.g. abdul_rtc_01).
     body = re.sub(r"[`*]", "", body)
-    patterns = [
-        r"(?im)^\s*(?:rtc\s*)?wallet(?:\s*(?:name|id|address))?\s*[:\-]\s*([A-Za-z0-9_-]{3,64})\s*$",
-        r"(?im)(?:rtc\s*)?wallet(?:\s*(?:name|id|address))?\s*[:\-]\s*([A-Za-z0-9_-]{3,64})",
-    ]
-    for pat in patterns:
-        matches = list(re.finditer(pat, body))
-        if matches:
-            # People often post follow-ups like "wallet fixed"; prefer the most
-            # recent match in the merged multi-comment body.
-            return matches[-1].group(1).strip()
-    return None
+
+    stop = {"wallet", "address", "miner_id", "please", "thanks", "thankyou"}
+    found: Optional[str] = None
+    expect_next = False
+    for line in body.splitlines():
+        s = line.strip()
+        if not s:
+            continue
+
+        # Handle "Wallet:" on one line and the value on the next.
+        if expect_next:
+            expect_next = False
+            if re.fullmatch(r"[A-Za-z0-9_\-]{4,80}", s) and s.lower() not in stop:
+                if re.search(r"[0-9_\-]", s) or s.upper().startswith("RTC") or len(s) >= 6:
+                    found = s
+                    continue
+
+        # Common non-English label (Chinese): "钱包地址： <wallet>" or value on next line.
+        m = re.search(r"钱包(?:地址)?\s*[:：\-]\s*([A-Za-z0-9_\-]{4,80})\b", s)
+        if m:
+            val = m.group(1).strip()
+            if val.lower() not in stop:
+                found = val
+                continue
+        if re.search(r"钱包(?:地址)?\s*[:：\-]\s*$", s):
+            expect_next = True
+            continue
+
+        # English label with value on next line.
+        if re.search(r"(?i)\b(?:rtc\s*)?(?:wallet|miner_id|address)\b.*[:：\-]\s*$", s):
+            expect_next = True
+            continue
+
+        # English label + value on same line (also allows "Payout target miner_id: X").
+        m = re.search(
+            r"(?i)\b(?:payout\s*target\s*)?"
+            r"(?:rtc\s*)?"
+            r"(wallet|miner_id|address)\s*"
+            r"(?:\((?:miner_?id|id|address)\))?\s*[:：\-]\s*"
+            r"([A-Za-z0-9_\-]{4,80})\b",
+            s,
+        )
+        if not m:
+            continue
+        val = m.group(2).strip()
+        if val.lower() in stop:
+            continue
+        # Heuristic: avoid capturing short plain words after "wallet:".
+        if not re.search(r"[0-9_\-]", val) and not val.upper().startswith("RTC") and len(val) < 6:
+            continue
+        found = val
+
+    return found
 
 
 def _extract_bottube_user(body: str) -> Optional[str]:
-    # Strip minimal markdown without corrupting valid underscores in usernames
-    # and URLs like `https://bottube.ai/agent/claw_ai`.
+    # Strip minimal markdown without corrupting valid underscores in usernames.
     body = re.sub(r"[`*]", "", body)
     patterns = [
         # Prefer extracting from profile URLs if present.
         r"https?://(?:www\.)?bottube\.ai/@([A-Za-z0-9_-]{2,64})",
         r"https?://(?:www\.)?bottube\.ai/agent/([A-Za-z0-9_-]{2,64})",
-        r"(?im)^\s*bottube(?:\s*(?:username|user|account))?\s*[:\-]\s*([A-Za-z0-9_-]{2,64})\s*$",
-        r"(?im)bottube(?:\s*(?:username|user|account))?\s*[:\-]\s*([A-Za-z0-9_-]{2,64})",
+        # Explicit label on its own line.
+        r"(?im)^\s*bottube(?:\s*(?:username|user|account))?\s*[:：\-]\s*(?!https?\b)([A-Za-z0-9_-]{2,64})\s*$",
     ]
     for pat in patterns:
         matches = list(re.finditer(pat, body))
@@ -186,6 +260,12 @@ def _looks_like_claim(body: str) -> bool:
         "proof",
         "bounty",
         "rtc",
+        "payout",
+        "submission",
+        "submit",
+        "pr",
+        "pull request",
+        "demo",
     ]
     return any(t in text for t in tokens)
 
