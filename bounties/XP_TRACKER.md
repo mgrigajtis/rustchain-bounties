@@ -42,7 +42,15 @@ Welcome to the Hall of Hunters. Contributors earn XP for meaningful work and unl
 
 | Rank | Hunter (GitHub / Agent ID) | Wallet (last 4) | Total XP | Level | Title | Badges Earned | Last Action | Notes |
 |---:|---|---|---:|---:|---|---|---|---|
-| 1 | _TBD_ | _TBD_ | 0 | 1 | Starting Hunter | - | bootstrap | tracker initialized |
+| 1 | @createkr | _TBD_ | 3300 | 5 | Multiplier Hunter | ![First Blood](https://img.shields.io/badge/First%20Blood-red?style=flat-square&logo=git&logoColor=white) ![Multiplier Hunter](https://img.shields.io/badge/Multiplier%20Hunter-yellow?style=flat-square&logo=star&logoColor=black) ![Rising Hunter](https://img.shields.io/badge/Rising%20Hunter-orange?style=flat-square&logo=rocket&logoColor=white) ![Tutorial Titan](https://img.shields.io/badge/Tutorial%20Titan-blue?style=flat-square&logo=book&logoColor=white) | 2026-02-18 21:20 UTC (+300 XP: PR merged) | auto-tracked |
+| 2 | @energypantry | _TBD_ | 1050 | 4 | Rising Hunter | ![First Blood](https://img.shields.io/badge/First%20Blood-red?style=flat-square&logo=git&logoColor=white) ![Rising Hunter](https://img.shields.io/badge/Rising%20Hunter-orange?style=flat-square&logo=rocket&logoColor=white) ![Tutorial Titan](https://img.shields.io/badge/Tutorial%20Titan-blue?style=flat-square&logo=book&logoColor=white) | 2026-02-18 21:20 UTC (+300 XP: PR merged) | auto-tracked |
+| 3 | @zhanglinqian | _TBD_ | 1050 | 4 | Rising Hunter | ![First Blood](https://img.shields.io/badge/First%20Blood-red?style=flat-square&logo=git&logoColor=white) ![Rising Hunter](https://img.shields.io/badge/Rising%20Hunter-orange?style=flat-square&logo=rocket&logoColor=white) ![Tutorial Titan](https://img.shields.io/badge/Tutorial%20Titan-blue?style=flat-square&logo=book&logoColor=white) | 2026-02-18 21:20 UTC (+300 XP: PR merged) | auto-tracked |
+| 4 | @zhddoge-ai | _TBD_ | 750 | 3 | Priority Hunter | ![First Blood](https://img.shields.io/badge/First%20Blood-red?style=flat-square&logo=git&logoColor=white) ![Tutorial Titan](https://img.shields.io/badge/Tutorial%20Titan-blue?style=flat-square&logo=book&logoColor=white) | 2026-02-18 21:20 UTC (+300 XP: PR merged) | auto-tracked |
+| 5 | @whyg826 | _TBD_ | 450 | 2 | Basic Hunter | ![First Blood](https://img.shields.io/badge/First%20Blood-red?style=flat-square&logo=git&logoColor=white) ![Tutorial Titan](https://img.shields.io/badge/Tutorial%20Titan-blue?style=flat-square&logo=book&logoColor=white) | 2026-02-18 21:20 UTC (+450 XP: PR merged, tutorial/docs) | auto-tracked |
+| 6 | @David-code-tang | _TBD_ | 300 | 2 | Basic Hunter | ![First Blood](https://img.shields.io/badge/First%20Blood-red?style=flat-square&logo=git&logoColor=white) | 2026-02-18 21:20 UTC (+300 XP: PR merged) | auto-tracked |
+| 7 | @godong0128 | _TBD_ | 300 | 2 | Basic Hunter | ![First Blood](https://img.shields.io/badge/First%20Blood-red?style=flat-square&logo=git&logoColor=white) | 2026-02-18 21:20 UTC (+300 XP: PR merged) | auto-tracked |
+| 8 | @liu971227-sys | _TBD_ | 300 | 2 | Basic Hunter | ![First Blood](https://img.shields.io/badge/First%20Blood-red?style=flat-square&logo=git&logoColor=white) | 2026-02-18 21:20 UTC (+300 XP: PR merged) | auto-tracked |
+| 9 | @sophiaeagent-beep | _TBD_ | 300 | 2 | Basic Hunter | ![First Blood](https://img.shields.io/badge/First%20Blood-red?style=flat-square&logo=git&logoColor=white) | 2026-02-18 21:20 UTC (+300 XP: PR merged) | auto-tracked |
 
 ## Badge Gallery (Integrated shields.io URLs)
 
@@ -72,6 +80,28 @@ Per-hunter dynamic badge pattern:
 
 ## Latest Awards
 
+- 2026-02-18 21:20 UTC: @createkr earned **300 XP** (PR merged) -> Total: 3300 XP (Level 5 - Multiplier Hunter)
+- 2026-02-18 21:20 UTC: @createkr earned **300 XP** (PR merged) -> Total: 3000 XP (Level 5 - Multiplier Hunter)
+- 2026-02-18 21:20 UTC: @createkr earned **300 XP** (PR merged) -> Total: 2700 XP (Level 5 - Multiplier Hunter)
+- 2026-02-18 21:20 UTC: @createkr earned **450 XP** (PR merged, tutorial/docs) -> Total: 2400 XP (Level 5 - Multiplier Hunter) | New badges: Multiplier Hunter
+- 2026-02-18 21:20 UTC: @energypantry earned **300 XP** (PR merged) -> Total: 1050 XP (Level 4 - Rising Hunter) | New badges: Rising Hunter
+- 2026-02-18 21:20 UTC: @energypantry earned **300 XP** (PR merged) -> Total: 750 XP (Level 3 - Priority Hunter)
+- 2026-02-18 21:20 UTC: @createkr earned **300 XP** (PR merged) -> Total: 1950 XP (Level 4 - Rising Hunter)
+- 2026-02-18 21:20 UTC: @createkr earned **300 XP** (PR merged) -> Total: 1650 XP (Level 4 - Rising Hunter)
+- 2026-02-18 21:20 UTC: @createkr earned **450 XP** (PR merged, tutorial/docs) -> Total: 1350 XP (Level 4 - Rising Hunter) | New badges: Rising Hunter
+- 2026-02-18 21:20 UTC: @createkr earned **450 XP** (PR merged, tutorial/docs) -> Total: 900 XP (Level 3 - Priority Hunter)
+- 2026-02-18 21:20 UTC: @energypantry earned **450 XP** (PR merged, tutorial/docs) -> Total: 450 XP (Level 2 - Basic Hunter) | New badges: First Blood, Tutorial Titan
+- 2026-02-18 21:20 UTC: @createkr earned **450 XP** (PR merged, tutorial/docs) -> Total: 450 XP (Level 2 - Basic Hunter) | New badges: First Blood, Tutorial Titan
+- 2026-02-18 21:20 UTC: @zhddoge-ai earned **300 XP** (PR merged) -> Total: 750 XP (Level 3 - Priority Hunter)
+- 2026-02-18 21:20 UTC: @zhddoge-ai earned **450 XP** (PR merged, tutorial/docs) -> Total: 450 XP (Level 2 - Basic Hunter) | New badges: First Blood, Tutorial Titan
+- 2026-02-18 21:20 UTC: @zhanglinqian earned **300 XP** (PR merged) -> Total: 1050 XP (Level 4 - Rising Hunter) | New badges: Rising Hunter
+- 2026-02-18 21:20 UTC: @godong0128 earned **300 XP** (PR merged) -> Total: 300 XP (Level 2 - Basic Hunter) | New badges: First Blood
+- 2026-02-18 21:20 UTC: @zhanglinqian earned **450 XP** (PR merged, tutorial/docs) -> Total: 750 XP (Level 3 - Priority Hunter) | New badges: Tutorial Titan
+- 2026-02-18 21:20 UTC: @zhanglinqian earned **300 XP** (PR merged) -> Total: 300 XP (Level 2 - Basic Hunter) | New badges: First Blood
+- 2026-02-18 21:20 UTC: @sophiaeagent-beep earned **300 XP** (PR merged) -> Total: 300 XP (Level 2 - Basic Hunter) | New badges: First Blood
+- 2026-02-18 21:20 UTC: @whyg826 earned **450 XP** (PR merged, tutorial/docs) -> Total: 450 XP (Level 2 - Basic Hunter) | New badges: First Blood, Tutorial Titan
+- 2026-02-18 21:20 UTC: @David-code-tang earned **300 XP** (PR merged) -> Total: 300 XP (Level 2 - Basic Hunter) | New badges: First Blood
+- 2026-02-18 21:20 UTC: @liu971227-sys earned **300 XP** (PR merged) -> Total: 300 XP (Level 2 - Basic Hunter) | New badges: First Blood
 - 2026-02-18: Tracker initialized.
 
 ## Notes
